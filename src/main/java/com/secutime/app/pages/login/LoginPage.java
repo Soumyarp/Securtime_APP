@@ -10,10 +10,10 @@ import com.secutime.app.homepage.HomePage;
 public class LoginPage extends TestBase {
 	
 	@FindBy(xpath="//input[@type='email']")
-	WebElement userName;
+	WebElement userNameTextBox;
 	
 	@FindBy(xpath="//input[@type='password']")
-	WebElement passWord;
+	WebElement passWordTextBox;
 	
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement signInButton;
@@ -27,8 +27,8 @@ public class LoginPage extends TestBase {
 	}
 	
 	public HomePage login(String username, String password){
-		userName.sendKeys(username);
-		passWord.sendKeys(password);
+		userNameTextBox.sendKeys(username);
+		passWordTextBox.sendKeys(password);
 		signInButton.click();
 		 
 		return new HomePage(); 
